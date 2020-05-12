@@ -20,7 +20,7 @@ class Source(Base):
             webpack_resolve = self.vim.eval('b:webpack_resolve')
             roots = webpack_resolve['modules']
         except Exception:
-            return []
+            roots = ['.']
 
         input_str = re.sub(r'.*[\'"]', '', context['input'])
         input_str_parts = re.split('/', input_str)
