@@ -14,6 +14,7 @@ class Source(Base):
         self.mark = '[I]'
         self.rank = 500
         self.input_pattern = '^import.+from.+'
+        self.min_pattern_length = 999
 
     def gather_candidates(self, context: UserContext) -> Candidates:
         try:
